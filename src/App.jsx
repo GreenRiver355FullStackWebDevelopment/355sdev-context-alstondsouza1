@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 
 import { RestaurantContext } from "./context/RestaurantContext";
+import AddRestaurant from "./components/AddRestaurant";
+import RestaurantsContainer from "./components/RestaurantsContainer";
 
 function App() {
   const [restaurantState, setRestaurants] = useState([]);
@@ -32,9 +34,9 @@ function App() {
       restaurants: restaurantState, 
       updateRestaurants 
     }}>
-      <Main />
     <div className="App">
-      <Main />
+      <AddRestaurant />
+      <RestaurantsContainer />
     </div>
     </RestaurantContext.Provider>
   );
